@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Based And Pasted</title>
-    <link href="https://github.com/M0n7y5/m0n7y5.github.io/feed.xml" rel="self" />
-    <link href="https://github.com/M0n7y5/m0n7y5.github.io" />
+    <link href="https://m0n7y5.github.io/feed.xml" rel="self" />
+    <link href="https://m0n7y5.github.io" />
     <updated>1970-01-01T01:00:00+01:00</updated>
     <author>
         <name>Admin</name>
     </author>
-    <id>https://github.com/M0n7y5/m0n7y5.github.io</id>
+    <id>https://m0n7y5.github.io</id>
 
     <entry>
         <title>Beef DLL Creation &amp; Research</title>
         <author>
             <name>Admin</name>
         </author>
-        <link href="https://github.com/M0n7y5/m0n7y5.github.io/beef-dll-creation-and-research-2.html"/>
-        <id>https://github.com/M0n7y5/m0n7y5.github.io/beef-dll-creation-and-research-2.html</id>
+        <link href="https://m0n7y5.github.io/beef-dll-creation-and-research-2.html"/>
+        <id>https://m0n7y5.github.io/beef-dll-creation-and-research-2.html</id>
 
-        <updated>2020-09-01T17:09:14+02:00</updated>
+        <updated>2020-09-01T17:23:10+02:00</updated>
             <summary>
                 <![CDATA[
                      Beef language is still in heavy development. Anything and anytime can change in Beef language and thus this document may not be valid anymore! Beef is an open source performance-oriented compiled programming language. Basically it's C language with C# like syntax. OOP paradigm also&hellip;
@@ -76,7 +76,7 @@
   </p>
 
     <figure class="post__image post__image--center">
-      <img loading="lazy" src="https://github.com/M0n7y5/m0n7y5.github.io/media/posts/4/ProjectCreation.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://github.com/M0n7y5/m0n7y5.github.io/media/posts/4/responsive/ProjectCreation-xs.png 300w ,https://github.com/M0n7y5/m0n7y5.github.io/media/posts/4/responsive/ProjectCreation-sm.png 480w ,https://github.com/M0n7y5/m0n7y5.github.io/media/posts/4/responsive/ProjectCreation-md.png 768w ,https://github.com/M0n7y5/m0n7y5.github.io/media/posts/4/responsive/ProjectCreation-lg.png 1024w ,https://github.com/M0n7y5/m0n7y5.github.io/media/posts/4/responsive/ProjectCreation-xl.png 1360w ,https://github.com/M0n7y5/m0n7y5.github.io/media/posts/4/responsive/ProjectCreation-2xl.png 1600w"  height="282" width="372" alt="" />
+      <img loading="lazy" src="https://m0n7y5.github.io/media/posts/4/ProjectCreation.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://m0n7y5.github.io/media/posts/4/responsive/ProjectCreation-xs.png 300w ,https://m0n7y5.github.io/media/posts/4/responsive/ProjectCreation-sm.png 480w ,https://m0n7y5.github.io/media/posts/4/responsive/ProjectCreation-md.png 768w ,https://m0n7y5.github.io/media/posts/4/responsive/ProjectCreation-lg.png 1024w ,https://m0n7y5.github.io/media/posts/4/responsive/ProjectCreation-xl.png 1360w ,https://m0n7y5.github.io/media/posts/4/responsive/ProjectCreation-2xl.png 1600w"  height="282" width="372" alt="" />
       
     </figure>
 
@@ -120,7 +120,7 @@ namespace DLLResearch
   </p>
 
     <figure class="post__image post__image--center">
-      <img loading="lazy" src="https://github.com/M0n7y5/m0n7y5.github.io/media/posts/4/Loaded1.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://github.com/M0n7y5/m0n7y5.github.io/media/posts/4/responsive/Loaded1-xs.png 300w ,https://github.com/M0n7y5/m0n7y5.github.io/media/posts/4/responsive/Loaded1-sm.png 480w ,https://github.com/M0n7y5/m0n7y5.github.io/media/posts/4/responsive/Loaded1-md.png 768w ,https://github.com/M0n7y5/m0n7y5.github.io/media/posts/4/responsive/Loaded1-lg.png 1024w ,https://github.com/M0n7y5/m0n7y5.github.io/media/posts/4/responsive/Loaded1-xl.png 1360w ,https://github.com/M0n7y5/m0n7y5.github.io/media/posts/4/responsive/Loaded1-2xl.png 1600w"  height="130" width="701" alt="" />
+      <img loading="lazy" src="https://m0n7y5.github.io/media/posts/4/Loaded1.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://m0n7y5.github.io/media/posts/4/responsive/Loaded1-xs.png 300w ,https://m0n7y5.github.io/media/posts/4/responsive/Loaded1-sm.png 480w ,https://m0n7y5.github.io/media/posts/4/responsive/Loaded1-md.png 768w ,https://m0n7y5.github.io/media/posts/4/responsive/Loaded1-lg.png 1024w ,https://m0n7y5.github.io/media/posts/4/responsive/Loaded1-xl.png 1360w ,https://m0n7y5.github.io/media/posts/4/responsive/Loaded1-2xl.png 1600w"  height="130" width="701" alt="" />
       
     </figure>
 
@@ -129,7 +129,7 @@ namespace DLLResearch
   </p>
 
     <figure class="post__image post__image--center">
-      <img loading="lazy" src="https://github.com/M0n7y5/m0n7y5.github.io/media/posts/4/Unloaded1.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://github.com/M0n7y5/m0n7y5.github.io/media/posts/4/responsive/Unloaded1-xs.png 300w ,https://github.com/M0n7y5/m0n7y5.github.io/media/posts/4/responsive/Unloaded1-sm.png 480w ,https://github.com/M0n7y5/m0n7y5.github.io/media/posts/4/responsive/Unloaded1-md.png 768w ,https://github.com/M0n7y5/m0n7y5.github.io/media/posts/4/responsive/Unloaded1-lg.png 1024w ,https://github.com/M0n7y5/m0n7y5.github.io/media/posts/4/responsive/Unloaded1-xl.png 1360w ,https://github.com/M0n7y5/m0n7y5.github.io/media/posts/4/responsive/Unloaded1-2xl.png 1600w"  height="142" width="686" alt="" />
+      <img loading="lazy" src="https://m0n7y5.github.io/media/posts/4/Unloaded1.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://m0n7y5.github.io/media/posts/4/responsive/Unloaded1-xs.png 300w ,https://m0n7y5.github.io/media/posts/4/responsive/Unloaded1-sm.png 480w ,https://m0n7y5.github.io/media/posts/4/responsive/Unloaded1-md.png 768w ,https://m0n7y5.github.io/media/posts/4/responsive/Unloaded1-lg.png 1024w ,https://m0n7y5.github.io/media/posts/4/responsive/Unloaded1-xl.png 1360w ,https://m0n7y5.github.io/media/posts/4/responsive/Unloaded1-2xl.png 1600w"  height="142" width="686" alt="" />
       
     </figure>
 
