@@ -17,7 +17,7 @@
         <link href="https://m0n7y5.github.io/beef-dll-creation-and-research-2.html"/>
         <id>https://m0n7y5.github.io/beef-dll-creation-and-research-2.html</id>
 
-        <updated>2020-09-01T17:23:10+02:00</updated>
+        <updated>2020-09-01T17:43:28+02:00</updated>
             <summary>
                 <![CDATA[
                      Beef language is still in heavy development. Anything and anytime can change in Beef language and thus this document may not be valid anymore! Beef is an open source performance-oriented compiled programming language. Basically it's C language with C# like syntax. OOP paradigm also&hellip;
@@ -99,17 +99,17 @@
 using System;
 namespace DLLResearch
 {
-    [AlwaysInclude] // &lt;- We need this to include our class in DLL 
+    [AlwaysInclude] // &lt;- We need this to include our class in DLL, Normally u dont need this
 	public static class Program
 	{
 		public static this() // &lt;- This will gets called when our library gets loaded
 		{
-			Debug.Write("Hello From Beef DLL :3");
+			Debug.WriteLine("Hello From Beef DLL :3");
 		}
 
 		public static ~this() // &lt;- This will gets called when our library gets unloaded
 		{
-			Debug.Write("See ya next time my friend :)");
+			Debug.WriteLine("See ya next time my friend :)");
 		}
 	}
 }</code></pre>
