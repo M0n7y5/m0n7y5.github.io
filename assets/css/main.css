@@ -1,5 +1,6 @@
 @charset "UTF-8";
 :root {
+  --background-color: #484848;
   --page-margin: 6vw;
   --entry-width: 42rem;
   --navbar-height: 4.4rem;
@@ -164,17 +165,17 @@ a {
   transition: all 0.24s ease-out;
 }
 a:hover {
-  color: var(--dark);
+  color: var(--white);
 }
 a:active {
-  color: var(--dark);
+  color: var(--white);
 }
 a:focus {
   outline: none;
 }
 
 .invert {
-  color: var(--dark);
+  color: var(--white);
   text-decoration: none;
   -webkit-transition: all 0.24s ease-out;
   -o-transition: all 0.24s ease-out;
@@ -393,7 +394,7 @@ dl dt {
 pre {
   background-color: var(--lighter);
   font-size: 0.8239746086rem;
-  padding: 1.7rem;
+  /* padding: 1.7rem; */
   white-space: pre-wrap;
   word-wrap: break-word;
 }
@@ -1429,7 +1430,7 @@ textarea {
 }
 
 .site-container {
-  background: var(--white);
+  background: var(--background-color);
   max-width: 100%;
   overflow: hidden;
 }
@@ -2027,20 +2028,26 @@ textarea {
 }
 
 .msg {
-  padding: 1.1333333333rem 2.2666666667rem;
+  padding: 0.5rem;
+  border-width: 0px 0px 0px 5px;
+  border-style: solid;
+  border-radius: 5px;
 }
 .msg--highlight {
-  background-color: #FFFCF1;
+  background-color: #917200;
+  color: #ffe895;
 }
 .msg--info {
-  background: #F2F9FF;
+  background: #34536d;
+  color: #a5c7e4;
 }
 .msg--success {
-  background: #F7FBF6;
+  background: #1a8000;
+  color: #d8ffcf;
 }
 .msg--warning {
-  background: #FFF3F3;
-  color: #A94442;
+  background: #a94442;
+  color: #fdd;
 }
 
 .ordered-list {
