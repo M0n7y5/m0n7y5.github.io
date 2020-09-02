@@ -21,7 +21,7 @@
             <category term="Beeflang"/>
             <category term="Beef"/>
 
-        <updated>2020-09-02T19:12:25+02:00</updated>
+        <updated>2020-09-02T19:30:56+02:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://m0n7y5.github.io/media/posts/4/screenEdited.png" alt="" />
@@ -136,7 +136,7 @@ namespace DLLResearch
   </p>
 
   <p class="msg msg--highlight">
-    Note: Our deconstructor also gets called when process, where our library is loaded, gonna exit.
+    <strong>Note:</strong> Our deconstructor also gets called when process, where our library is loaded, gonna exit.
 <br>
   </p>
 
@@ -202,6 +202,10 @@ public static int32 MyAmazingMethod(int32 a, int32 b)
 {
     return a + b;
 }</code></pre>
+
+  <p class="msg msg--highlight">
+    <strong>Note:</strong> That works only when we are targeting x86 platform
+  </p>
 
     <h2 id="how-to-work-with-threads">
       How to work with threads
