@@ -16,15 +16,21 @@
         </author>
         <link href="https://m0n7y5.github.io/beef-dll-creation-and-research-2.html"/>
         <id>https://m0n7y5.github.io/beef-dll-creation-and-research-2.html</id>
+            <category term="Research"/>
+            <category term="DLL"/>
+            <category term="Beeflang"/>
+            <category term="Beef"/>
 
-        <updated>2020-09-02T14:15:54+02:00</updated>
+        <updated>2020-09-02T18:13:22+02:00</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://m0n7y5.github.io/media/posts/4/screenEdited.png" alt="" />
                      Beef language is still in heavy development. Everything can change at any time in Beef language and thus this document may not be valid anymore! Beef is an open source performance-oriented compiled programming language. Basically it's C language with C# like syntax. OOP paradigm&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <img src="https://m0n7y5.github.io/media/posts/4/screenEdited.png" alt="" />
                 
   <p class="msg msg--warning">
     Beef language is still in heavy development. Everything can change at any time in Beef language and thus this document may not be valid anymore!
@@ -56,7 +62,7 @@
     </h2>
 
   <p>
-    Beef is an open source performance-oriented compiled programming language. Basically it's C language with C# like syntax. OOP paradigm also can be used for developing applications since in Beef u can create custom reference types (Objects) and combine it with polymorphism. Reflection is also possible. Its quiet fast and its fun to work with. More info can be found here -&gt; https://www.beeflang.org/
+    Beef is an open source performance-oriented compiled programming language. Basically it's C language with C# like syntax. OOP paradigm also can be used for developing applications since in Beef u can create custom reference types (Objects) and combine it with polymorphism. Reflection is also possible. Its quite fast and its fun to work with. More info can be found here -&gt; https://www.beeflang.org/
   </p>
 
     <h2 id="beef-dll-and-dllmain">
@@ -91,7 +97,7 @@
 using System;
 namespace DLLResearch
 {
-    [AlwaysInclude] // &lt;- We need this to include our class in DLL, Normally u dont need this
+        [AlwaysInclude] // &lt;- We need this to include our class in DLL, Normally u dont need this
 	public static class Program
 	{
 		public static this() // &lt;- This will gets called when our library gets loaded
@@ -138,16 +144,75 @@ namespace DLLResearch
       Exporting methods
     </h2>
 
-  <p class="msg msg--info">
-    Todo
+  <p>
+    So what if we wanna export some methods in our DLL? Well... Thats really simple task. Just write your method and throw <code>ExportAttribute</code> on it like this:
   </p>
+<pre class="line-numbers  language-csharp"><code>[Export]
+public static int32 MyAmazingMethod(int32 a, int32 b)
+{
+    return a + b;
+}</code></pre>
+
+  <p>
+    This will export your method using Beef style mangling. Ez ...&nbsp;
+  </p>
+
+    <figure class="post__image post__image--center">
+      <img loading="lazy" src="https://m0n7y5.github.io/media/posts/4/peview_ZD5g1EkpwT.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://m0n7y5.github.io/media/posts/4/responsive/peview_ZD5g1EkpwT-xs.png 300w ,https://m0n7y5.github.io/media/posts/4/responsive/peview_ZD5g1EkpwT-sm.png 480w ,https://m0n7y5.github.io/media/posts/4/responsive/peview_ZD5g1EkpwT-md.png 768w ,https://m0n7y5.github.io/media/posts/4/responsive/peview_ZD5g1EkpwT-lg.png 1024w ,https://m0n7y5.github.io/media/posts/4/responsive/peview_ZD5g1EkpwT-xl.png 1360w ,https://m0n7y5.github.io/media/posts/4/responsive/peview_ZD5g1EkpwT-2xl.png 1600w"  height="75" width="516" alt="" />
+      <figcaption>Exported method using Beef-style mangling</figcaption>
+    </figure>
+
+  <p>
+    But what if you wanna use your exported method in some app using C-style API? Then u need to add <code>CLinkAttribute</code>. That will export your method using C-style mangling.
+  </p>
+<pre class="line-numbers  language-csharp"><code>[Export, CLink]
+public static int32 MyAmazingMethod(int32 a, int32 b)
+{
+    return a + b;
+}</code></pre>
+
+    <figure class="post__image post__image--center">
+      <img loading="lazy" src="https://m0n7y5.github.io/media/posts/4/peview_GBlChSEyrD.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://m0n7y5.github.io/media/posts/4/responsive/peview_GBlChSEyrD-xs.png 300w ,https://m0n7y5.github.io/media/posts/4/responsive/peview_GBlChSEyrD-sm.png 480w ,https://m0n7y5.github.io/media/posts/4/responsive/peview_GBlChSEyrD-md.png 768w ,https://m0n7y5.github.io/media/posts/4/responsive/peview_GBlChSEyrD-lg.png 1024w ,https://m0n7y5.github.io/media/posts/4/responsive/peview_GBlChSEyrD-xl.png 1360w ,https://m0n7y5.github.io/media/posts/4/responsive/peview_GBlChSEyrD-2xl.png 1600w"  height="70" width="337" alt="" />
+      <figcaption>Exported method using C-style mangling</figcaption>
+    </figure>
+
+  <p>
+    See? It's that easy!&nbsp;
+  </p>
+
+  <p>
+    In case we need C++ mangling we can use&nbsp;<code>LinkNameAttribute</code>. You can use this attribute to specify link name for importing methods from another library or to specify mangling style for exported method. Actually you don't need <code>CLinkAttribute</code> at all. You can use <code>LinkName(.C)</code> instead!
+  </p>
+<pre class="line-numbers  language-csharp"><code>[Export, LinkName(.CPP)]
+public static int32 MyAmazingMethod(int32 a, int32 b)
+{
+    return a + b;
+}</code></pre>
+
+    <figure class="post__image post__image--center">
+      <img loading="lazy" src="https://m0n7y5.github.io/media/posts/4/peview_k4UffocXyl.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://m0n7y5.github.io/media/posts/4/responsive/peview_k4UffocXyl-xs.png 300w ,https://m0n7y5.github.io/media/posts/4/responsive/peview_k4UffocXyl-sm.png 480w ,https://m0n7y5.github.io/media/posts/4/responsive/peview_k4UffocXyl-md.png 768w ,https://m0n7y5.github.io/media/posts/4/responsive/peview_k4UffocXyl-lg.png 1024w ,https://m0n7y5.github.io/media/posts/4/responsive/peview_k4UffocXyl-xl.png 1360w ,https://m0n7y5.github.io/media/posts/4/responsive/peview_k4UffocXyl-2xl.png 1600w"  height="66" width="506" alt="" />
+      <figcaption>Exported method using C++ style mangling</figcaption>
+    </figure>
+
+  <p>
+    As you can see, <strong>calling convention</strong> <code>__cdecl</code> is used by default. If u want to change that, you need to use&nbsp;<code>CallingConventionAttribute</code>. For example, this is how we export our method using <code>__stdcall</code> calling convention ...
+  </p>
+<pre class="line-numbers  language-csharp"><code>[Export, LinkName(.CPP), CallingConvention(.Stdcall)]
+public static int32 MyAmazingMethod(int32 a, int32 b)
+{
+    return a + b;
+}</code></pre>
 
     <h2 id="how-to-work-with-threads">
       How to work with threads
     </h2>
 
   <p class="msg msg--info">
-    Todo
+    Waiting for latest nightly build ...
+  </p>
+
+  <p>
+    
   </p>
             ]]>
         </content>
