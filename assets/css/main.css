@@ -395,7 +395,7 @@ pre {
   background-color: var(--lighter);
   font-size: 0.8239746086rem;
   /* padding: 1.7rem; */
-  white-space: pre-wrap;
+  white-space: pre;
   word-wrap: break-word;
   -webkit-box-shadow: 0px 10px 30px -6px rgba(0, 0, 0, 0.62);
   -moz-box-shadow: 0px 10px 30px -6px rgba(0, 0, 0, 0.62);
@@ -404,15 +404,15 @@ pre {
 pre > code {
   color: var(--text-color);
   display: inline-block;
-  font-size: inherit;
   padding: 0;
+
 }
 
 code {
   background-color: var(--lighter);
   color: var(--color);
-  font-size: 0.8239746086rem;
-  font-family: Menlo, Monaco, Consolas, Courier New, monospace;
+  font-size: 1rem;
+  font-family: 'Fira Code', monospace;
 }
 
 table {
