@@ -17,17 +17,17 @@
         <link href="https://m0n7y5.github.io/beef-dll-creation-and-research-2.html"/>
         <id>https://m0n7y5.github.io/beef-dll-creation-and-research-2.html</id>
 
-        <updated>2020-09-02T13:39:02+02:00</updated>
+        <updated>2020-09-02T14:15:54+02:00</updated>
             <summary>
                 <![CDATA[
-                     Beef language is still in heavy development. Anything and anytime can change in Beef language and thus this document may not be valid anymore! Beef is an open source performance-oriented compiled programming language. Basically it's C language with C# like syntax. OOP paradigm also&hellip;
+                     Beef language is still in heavy development. Everything can change at any time in Beef language and thus this document may not be valid anymore! Beef is an open source performance-oriented compiled programming language. Basically it's C language with C# like syntax. OOP paradigm&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
                 
   <p class="msg msg--warning">
-    Beef language is still in heavy development. Anything and anytime can change in Beef language and thus this document may not be valid anymore!
+    Beef language is still in heavy development. Everything can change at any time in Beef language and thus this document may not be valid anymore!
   </p>
 
   <p>
@@ -37,7 +37,7 @@
   <div class="post__toc">
     <h3>Content</h3>
     <ul>
-      <li><a href="#requirementsnbspbr">Requirements&nbsp;<br></a></li><li><a href="#about-beefbr">About Beef<br></a></li><li><a href="#classic-dll-with-exported-methods">Classic DLL with exported methods</a></li><li><a href="#dll-with-dllmain">DLL with DllMain</a></li><li><a href="#how-to-work-with-threads-in-dll">How to work with threads in DLL</a></li>
+      <li><a href="#requirementsnbspbr">Requirements&nbsp;<br></a></li><li><a href="#about-beefbr">About Beef<br></a></li><li><a href="#beef-dll-and-dllmain">Beef DLL and DllMain</a></li><li><a href="#exporting-methods">Exporting methods</a></li><li><a href="#how-to-work-with-threads">How to work with threads</a></li>
     </ul>
   </div>
   
@@ -59,16 +59,8 @@
     Beef is an open source performance-oriented compiled programming language. Basically it's C language with C# like syntax. OOP paradigm also can be used for developing applications since in Beef u can create custom reference types (Objects) and combine it with polymorphism. Reflection is also possible. Its quiet fast and its fun to work with. More info can be found here -&gt; https://www.beeflang.org/
   </p>
 
-    <h2 id="classic-dll-with-exported-methods">
-      Classic DLL with exported methods
-    </h2>
-
-  <p class="msg msg--info">
-    Todo
-  </p>
-
-    <h2 id="dll-with-dllmain">
-      DLL with DllMain
+    <h2 id="beef-dll-and-dllmain">
+      Beef DLL and DllMain
     </h2>
 
   <p>
@@ -121,7 +113,7 @@ namespace DLLResearch
 
     <figure class="post__image post__image--center">
       <img loading="lazy" src="https://m0n7y5.github.io/media/posts/4/Loaded1.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://m0n7y5.github.io/media/posts/4/responsive/Loaded1-xs.png 300w ,https://m0n7y5.github.io/media/posts/4/responsive/Loaded1-sm.png 480w ,https://m0n7y5.github.io/media/posts/4/responsive/Loaded1-md.png 768w ,https://m0n7y5.github.io/media/posts/4/responsive/Loaded1-lg.png 1024w ,https://m0n7y5.github.io/media/posts/4/responsive/Loaded1-xl.png 1360w ,https://m0n7y5.github.io/media/posts/4/responsive/Loaded1-2xl.png 1600w"  height="130" width="701" alt="" />
-      
+      <figcaption>DebugView++ Output: Printed message from static contructor</figcaption>
     </figure>
 
   <p>
@@ -130,7 +122,7 @@ namespace DLLResearch
 
     <figure class="post__image post__image--center">
       <img loading="lazy" src="https://m0n7y5.github.io/media/posts/4/Unloaded1.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://m0n7y5.github.io/media/posts/4/responsive/Unloaded1-xs.png 300w ,https://m0n7y5.github.io/media/posts/4/responsive/Unloaded1-sm.png 480w ,https://m0n7y5.github.io/media/posts/4/responsive/Unloaded1-md.png 768w ,https://m0n7y5.github.io/media/posts/4/responsive/Unloaded1-lg.png 1024w ,https://m0n7y5.github.io/media/posts/4/responsive/Unloaded1-xl.png 1360w ,https://m0n7y5.github.io/media/posts/4/responsive/Unloaded1-2xl.png 1600w"  height="142" width="686" alt="" />
-      
+      <figcaption>DebugView++ Output: Printed message from static decontructor</figcaption>
     </figure>
 
   <p>
@@ -142,8 +134,16 @@ namespace DLLResearch
 <br>
   </p>
 
-    <h2 id="how-to-work-with-threads-in-dll">
-      How to work with threads in DLL
+    <h2 id="exporting-methods">
+      Exporting methods
+    </h2>
+
+  <p class="msg msg--info">
+    Todo
+  </p>
+
+    <h2 id="how-to-work-with-threads">
+      How to work with threads
     </h2>
 
   <p class="msg msg--info">
