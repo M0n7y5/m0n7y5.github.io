@@ -21,11 +21,11 @@
             <category term="Beeflang"/>
             <category term="Beef"/>
 
-        <updated>2020-09-02T18:13:22+02:00</updated>
+        <updated>2020-09-02T19:06:18+02:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://m0n7y5.github.io/media/posts/4/screenEdited.png" alt="" />
-                     Beef language is still in heavy development. Everything can change at any time in Beef language and thus this document may not be valid anymore! Beef is an open source performance-oriented compiled programming language. Basically it's C language with C# like syntax. OOP paradigm&hellip;
+                     Beef language is still in heavy development. Anything can change at any time in Beef language and thus this document may not be valid anymore! Beef is an open source performance-oriented compiled programming language. Basically it's C language with C# like syntax. OOP paradigm&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -33,7 +33,7 @@
                     <img src="https://m0n7y5.github.io/media/posts/4/screenEdited.png" alt="" />
                 
   <p class="msg msg--warning">
-    Beef language is still in heavy development. Everything can change at any time in Beef language and thus this document may not be valid anymore!
+    Beef language is still in heavy development. Anything can change at any time in Beef language and thus this document may not be valid anymore!
   </p>
 
   <p>
@@ -89,9 +89,9 @@
 }</code></pre>
 
   <p>
-    So... Normally when you are creating DLL (for example in C/++) you gonna define DllMain method which is gonna by called when some process gonna try to load our library using, for example, LoadLibrary function from Win32 API. However, this is not possible in Beef since DllMain is already handled by Beef Runtime.
+    So... Normally when you are creating DLL (for example in C/++) you define DllMain method which is gonna be called when a process is going to try and load our library using, for example, LoadLibrary function from Win32 API. However, this is not possible in Beef since DllMain is already handled by Beef Runtime.
 <br>
-<br>So what we gonna do now? 🤔 It turns out that solution is very simple. Only thing we need to do is write public static constructor and deconstructor for class Program.
+<br>So what we gonna do now? 🤔 It turns out that the solution is very simple. Only thing we need to do is write a public static constructor and deconstructor for class Program.
   </p>
 <pre class="line-numbers  language-csharp"><code>using System.Diagnostics;
 using System;
@@ -123,7 +123,7 @@ namespace DLLResearch
     </figure>
 
   <p>
-    Our constructor get called and we printed first message. So lets try to unload our library and lets see what happens.&nbsp;<br>
+    Our constructor get called and we printed first message. So lets try to unload our library and see what happens.&nbsp;<br>
   </p>
 
     <figure class="post__image post__image--center">
@@ -132,7 +132,7 @@ namespace DLLResearch
     </figure>
 
   <p>
-    Looks like our deconstructor gets also called.<br>
+    Looks like our deconstructor gets called.<br>
   </p>
 
   <p class="msg msg--highlight">
@@ -145,7 +145,7 @@ namespace DLLResearch
     </h2>
 
   <p>
-    So what if we wanna export some methods in our DLL? Well... Thats really simple task. Just write your method and throw <code>ExportAttribute</code> on it like this:
+    So what if we wanna export some methods in our DLL? Well... Thats a really simple task. Just write your method and throw <code>ExportAttribute</code> on it like this:
   </p>
 <pre class="line-numbers  language-csharp"><code>[Export]
 public static int32 MyAmazingMethod(int32 a, int32 b)
